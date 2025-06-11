@@ -59,11 +59,7 @@ const Contact = () => {
     required
     className="w-full border border-pink-400 p-2 rounded text-pink-700 bg-pink-50 accent-pink-500"
   />
-  {!formData.weddingDate && (
-    <span className="absolute left-3 top-2 text-pink-400 pointer-events-none text-sm">
-      Wedding Date
-    </span>
-  )}
+ 
 
       <input
         type="email"
