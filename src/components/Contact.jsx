@@ -48,17 +48,22 @@ const Contact = () => {
         value={formData.name}
         onChange={handleChange}
         required
-        className="w-full border  border-pink-400 p-2 rounded"
+        className="w-full border bg-white border-pink-400 p-2 rounded placeholder-pink-400"
       />
 
       <input
-        type="date"
-        name="weddingDate"
-        value={formData.weddingDate}
-        onChange={handleChange}
-        required
-        className="w-full border border-pink-400 p-2 rounded"
-      />
+    type="date"
+    name="weddingDate"
+    value={formData.weddingDate}
+    onChange={handleChange}
+    required
+    className="w-full border border-pink-400 p-2 rounded text-pink-700 bg-pink-50 accent-pink-500"
+  />
+  {!formData.weddingDate && (
+    <span className="absolute left-3 top-2 text-pink-400 pointer-events-none text-sm">
+      Wedding Date
+    </span>
+  )}
 
       <input
         type="email"
@@ -67,7 +72,7 @@ const Contact = () => {
         value={formData.email}
         onChange={handleChange}
         required
-        className="w-full border border-pink-400 p-2 rounded"
+        className="w-full border bg-white border-pink-400 p-2 rounded placeholder-pink-400"
       />
 
       <input
@@ -77,20 +82,21 @@ const Contact = () => {
         value={formData.phone}
         onChange={handleChange}
         required
-        className="w-full border border-pink-400 p-2 rounded"
+        className="w-full border bg-white border-pink-400 p-2 rounded placeholder-pink-400"
       />
 
       <div>
-        <p className="mb-2 font-semibold">Select Functions:</p>
+        <p className="mb-2 text-pink-800  font-semibold">Select Functions:</p>
         <div className="grid grid-cols-2 gap-2">
           {functionOptions.map((func) => (
-            <label key={func} className="inline-flex items-center space-x-2">
+            <label key={func} className="inline-flex text-pink-700 items-center space-x-2">
               <input
                 type="checkbox"
                 value={func}
                 checked={formData.functions.includes(func)}
                 onChange={handleCheckboxChange}
-                className="text-pink-300"
+                className="text-pink-500 accent-pink-500"
+          
               />
               <span>{func}</span>
             </label>
@@ -104,7 +110,7 @@ const Contact = () => {
         value={formData.description}
         onChange={handleChange}
         rows="4"
-        className="w-full border border-pink-400 p-2 rounded"
+        className="w-full border bg-white border-pink-400 p-2 rounded placeholder-pink-400"
       />
 
       <button
