@@ -17,8 +17,8 @@ const Venus = () => {
 
         {/* Swiper Section */}
         <Swiper
-          slidesPerView={4}
-          spaceBetween={20}
+          slidesPerView={3}
+          spaceBetween={25}
           navigation={true}
           modules={[Navigation, Autoplay]}
           autoplay={{ delay: 3000 }}

@@ -13,7 +13,7 @@ const slides = [banner1, banner2, banner3];
 
 const HeroSection = () => {
   return (
-    <div className="Homeslider py-4 container">
+    <div className="Homeslider  ">
       <div className="">
          <Swiper
           loop={true}

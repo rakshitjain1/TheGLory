@@ -12,7 +12,7 @@ import { colors } from "@mui/material";
 const ServiceBox = ({ to, label, image }) => (
   <Link
     to={to}
-    className="relative w-full h-[200px] rounded overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
+    className="relative w-full h-[300px] rounded overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
   >
     <div className="absolute top-2 left-2 z-10 bg-pink-300 bg-opacity-80 font-bold text-lg px-3 py-1 rounded"  style={{ color: "#800022" }}>
       {label}
@@ -36,7 +36,7 @@ const Services = () => {
       </div>
 
       {/* Grid layout for service boxes */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+   <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <ServiceBox to="/reception" label="Reception" image={receptionImg} />
         <ServiceBox to="/ceremony" label="Ceremony" image={ceremonyImg} />
         <ServiceBox to="/haldi" label="Haldi" image={haldiImg} />
