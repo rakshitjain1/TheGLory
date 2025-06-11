@@ -8,7 +8,7 @@ import banner from "../assets/mayra.jpg";
 const Venus = () => {
   return (
     <div className="Homeslider py-10 container">
-      <div className=" mx-auto mb-0 px-4 py-4 bg-pink-200">
+      <div className=" mx-auto mb-0 px-4 py-4 ">
         {/* Heading Section */}
         <div className="text-center  mb-8">
           <h2 className="text-4xl font-bold text-pink-800 mb-2"> Our Venus</h2>
