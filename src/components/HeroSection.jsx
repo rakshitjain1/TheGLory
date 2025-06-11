@@ -30,7 +30,7 @@ const HeroSection = () => {
         >
           {slides.map((img, index) => (
             <SwiperSlide key={index}>
-              <div className="item rounded-[20px] overflow-hidden">
+              <div className="item  overflow-hidden">
                 <img
                   src={img}
                   alt={`slide-${index}`}
