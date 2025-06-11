@@ -34,7 +34,7 @@ const HeroSection = () => {
                 <img
                   src={img}
                   alt={`slide-${index}`}
-                  className="w-full h-[620px] object-cover"
+                  className="w-full h-[550px] object-fit"
                 />
               </div>
             </SwiperSlide>
