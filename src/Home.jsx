@@ -2,7 +2,7 @@ import React from 'react'
 import HeroSection from './components/HeroSection'
 import About from './components/About'
 import Services from './components/Services'
-import Venus from './components/Venus'
+import Venus from './components/Venue'
 import Contact from './components/Contact'
 
 const Home = () => {

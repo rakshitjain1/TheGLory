@@ -5,13 +5,13 @@ import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper/modules";
 import banner from "../assets/mayra.jpg";
 
-const Venus = () => {
+const Venue = () => {
   return (
     <div className="Homeslider py-10 container">
       <div className=" mx-auto mb-0 px-4 py-4 ">
         {/* Heading Section */}
         <div className="text-center  mb-8">
-          <h2 className="text-4xl font-bold text-pink-800 mb-2"> Our Venus</h2>
+          <h2 className="text-4xl font-bold text-pink-800 mb-2"> Our Venue</h2>
           <p className="text-pink-700 text-lg">Explore the highlights of our Venus collection</p>
         </div>
 
@@ -37,4 +37,4 @@ const Venus = () => {
   );
 };
 
-export default Venus;
+export default Venue;

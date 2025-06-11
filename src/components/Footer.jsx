@@ -10,7 +10,7 @@ import {
 import logo from '../assets/logo.png'
 const Footer = () => {
   return (
-    <footer className="mt-10"> {/* Added margin-top here */}
+    <footer className="mt-10 bg-[#323030]"> {/* Added margin-top here */}
       <div className=" text-pink-700 py-8 px-4 text-center">
         <div className="mb-4 ">
           <img
