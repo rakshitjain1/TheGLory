@@ -7,16 +7,16 @@ import {
   FaYoutube,
   FaPinterestP,
 } from "react-icons/fa";
-
+import logo from '../assets/logo.png'
 const Footer = () => {
   return (
     <footer className="mt-10"> {/* Added margin-top here */}
       <div className="container bg-pink-200 text-pink-700 py-8 px-4 text-center">
         <div className="mb-4 ">
           <img
-            src="/logo.png"
+            src={logo}
             alt="The Glory Event"
-            className="mx-auto mb-2 w-16"
+            className="mx-auto  mb-2 w-26"
           />
           <p className="text-sm">
             <Link to="/bangalore" className="hover:underline">Bangalore</Link> |{" "}

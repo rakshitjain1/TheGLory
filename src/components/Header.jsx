@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import logo from '../assets/logo.png'
 
 
 // Navigation links
@@ -19,11 +19,14 @@ const Header = () => {
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
         
         {/* Logo Section - 30% width */}
-        <div className="w-[30%] h-[55px] flex items-center">
-          <Link to="/">
-            <span className="text-3xl  font-extrabold text-pink-700">The Glory Event</span>
-          </Link>
-        </div>
+        <div className="w-[30%] h-[55px] flex items-center space-x-2">
+  <Link to="/" className="flex items-center space-x-2">
+    <img className="w-50 h-50 object-contain" src={logo} alt="logo" />
+    {/* <span className="text-2xl font-extrabold text-pink-700">
+      The Glory Event
+    </span> */}
+  </Link>
+</div>
 
         {/* Navigation + Icons - 70% width */}
         <nav className="w-[70%]">
