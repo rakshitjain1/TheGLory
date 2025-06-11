@@ -5,7 +5,7 @@ import receptionImg from "../assets/reception.jpg";
 import ceremonyImg from "../assets/ceremony.png";
 import haldiImg from "../assets/haldi.jpg";
 import sangeetImg from "../assets/sangeet.jpg";
-import mayraImg from "../assets/sangeet.jpg"; // placeholder
+import mayraImg from "../assets/mayra.jpg"; // placeholder
 import { colors } from "@mui/material";
 
 // Reusable Service Box component
