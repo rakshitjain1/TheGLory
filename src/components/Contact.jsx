@@ -51,14 +51,6 @@ const Contact = () => {
         className="w-full border bg-white border-pink-400 p-2 rounded placeholder-pink-400"
       />
 
-      <input
-    type="date"
-    name="weddingDate"
-    value={formData.weddingDate}
-    onChange={handleChange}
-    required
-    className="w-full border border-pink-400 p-2 rounded text-pink-700 bg-pink-50 accent-pink-500"
-  />
  
 
       <input
@@ -81,25 +73,8 @@ const Contact = () => {
         className="w-full border bg-white border-pink-400 p-2 rounded placeholder-pink-400"
       />
 
-      <div>
-        <p className="mb-2 text-pink-800  font-semibold">Select Functions:</p>
-        <div className="grid grid-cols-2 gap-2">
-          {functionOptions.map((func) => (
-            <label key={func} className="inline-flex text-pink-700 items-center space-x-2">
-              <input
-                type="checkbox"
-                value={func}
-                checked={formData.functions.includes(func)}
-                onChange={handleCheckboxChange}
-                className="text-pink-500 accent-pink-500"
-          
-              />
-              <span>{func}</span>
-            </label>
-          ))}
-        </div>
-      </div>
-
+     
+      
       <textarea
         name="description"
         placeholder="Additional Information"
