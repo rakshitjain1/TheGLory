@@ -36,12 +36,17 @@ const Services = () => {
       </div>
 
       {/* Grid layout for service boxes */}
-   <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+   <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <ServiceBox to="/reception" label="Reception" image={receptionImg} />
         <ServiceBox to="/ceremony" label="Ceremony" image={ceremonyImg} />
         <ServiceBox to="/haldi" label="Haldi" image={haldiImg} />
         <ServiceBox to="/sangeet" label="Sangeet" image={sangeetImg} />
         <ServiceBox to="/mayra" label="Mayra" image={mayraImg} />
+        <ServiceBox to="/mayra" label="Sufi Night" image={sangeetImg} />
+        <ServiceBox to="/mayra" label="Wedding" image={mayraImg} />
+        <ServiceBox to="/mayra" label="Mehndi" image={haldiImg} />
+        <ServiceBox to="/mayra" label="After Party" image={mayraImg} />
+        <ServiceBox to="/mayra" label="Sajan Goth" image={receptionImg} />
       </div>
     </div>
     </div>
