@@ -7,7 +7,8 @@ import Header from './components/Header'
 import Home from './Home'
 import Gallery from './Pages/Gallery'
 import Footer from './components/Footer'
-import { ClassNames } from '@emotion/react'
+import GalleryDetail from './Pages/GalleryDetail'
+
 function App() {
  
       
@@ -20,6 +21,8 @@ function App() {
        <Routes>
          <Route path="/" exact={true} element={<Home/>} />
          <Route path="/gallery" exact={true} element={<Gallery/>} />
+         <Route path="/gallery/:category" element={<GalleryDetail />} />
+       
        </Routes>
        <Footer/>
 
