@@ -54,7 +54,7 @@ import img49 from "../assets/day/19.jpg";
 import img50 from "../assets/day/20.jpg";
 
 import img51 from '../assets/indor/1.jpg'
-import img52 from '../assets/indor/2.png'
+import img52 from '../assets/indor/2.PNG'
 import img53 from '../assets/indor/3.jpg'
 import img54 from '../assets/indor/4.jpg'
 import img55 from '../assets/indor/5.jpg'
