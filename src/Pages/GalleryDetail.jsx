@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import img1 from "../assets/party/1.jpg";
 import img2 from "../assets/party/2.jpg";
@@ -94,8 +94,10 @@ const GalleryDetail = () => {
       .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
       .join(" ");
 
+      const [selectedImage, setSelectedImage] = useState(null);
+
   return (
-  <div className="p-4 max-w-5xl mx-auto">
+ <div className="p-4 max-w-5xl mx-auto">
   <div className="relative flex items-center justify-center mt-10 mb-6">
     <button
       onClick={() => navigate(-1)}
@@ -114,11 +116,27 @@ const GalleryDetail = () => {
         key={idx}
         src={src}
         alt={`image-${idx}`}
-        className="w-full h-60 object-cover rounded shadow"
+        onClick={() => setSelectedImage(src)}
+        className="w-full h-60 object-cover rounded shadow cursor-pointer transition-transform hover:scale-105"
       />
     ))}
   </div>
+
+  {/* Modal for full image view */}
+  {selectedImage && (
+    <div
+      className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+      onClick={() => setSelectedImage(null)}
+    >
+      <img
+        src={selectedImage}
+        alt="Full view"
+        className="max-w-full max-h-full object-contain rounded"
+      />
+    </div>
+  )}
 </div>
+
 
 
   );
