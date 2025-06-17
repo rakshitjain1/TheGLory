@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import leafImg from "../assets/leaf.png";
 import img from "../assets/2.jpg";
+import bg from "../assets/bg.jpg";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -34,94 +34,82 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row max-w-6xl mx-auto p-4 gap-6 items-center justify-center relative overflow-hidden">
+    <div className="flex flex-col md:flex-row max-w-6xl mx-auto p-4 gap-6  justify-center relative overflow-hidden">
       {/* Left Side Image */}
       <div className="w-full md:w-1/2 flex justify-center items-center">
         <img
           src={img}
           alt="Wedding Decoration"
-          className="w-full h-auto rounded-lg shadow-md object-cover"
+          className="w-full h-[400px] md:h-[500px] rounded-lg shadow-md object-cover"
         />
       </div>
 
-      {/* Right Side - Form */}
-      <div className="w-full md:w-1/2 relative z-10 img">
-        {/* Corner Decorative Leaves */}
-        <img
-          src={leafImg}
-          alt="decor"
-          className="absolute w-24 h-24   left-0 rotate-[-30deg] z-50 opacity-70"
-        />
-        <img
-          src={leafImg}
-          alt="decor"
-          className="absolute w-24 h-24 top-0 right-0 rotate-[20deg] z-50 opacity-70"
-        />
-        <img
-          src={leafImg}
-          alt="decor"
-          className="absolute w-24 h-24 bottom-0 left-0 rotate-[180deg] z-50 opacity-70"
-        />
-        <img
-          src={leafImg}
-          alt="decor"
-          className="absolute w-24 h-24 bottom-0 right-0 rotate-[140deg] z-50 opacity-70"
-        />
-
-        <form
-          onSubmit={handleSubmit}
-          className="relative bg-pink-100 p-6 rounded-md shadow-md space-y-4 z-30"
-        >
-          <h2 className="text-xl text-pink-800 font-bold mb-4 text-center">
-            Contact Us
-          </h2>
-
-          <input
-            type="text"
-            name="name"
-            placeholder="Full Name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-            className="w-full border bg-white border-pink-400 text-pink-500 p-2 rounded placeholder-pink-400"
-          />
-
-          <input
-            type="email"
-            name="email"
-            placeholder="Email Address"
-            value={formData.email}
-            onChange={handleChange}
-            required
-            className="w-full border bg-white border-pink-400 p-2 rounded text-pink-500 placeholder-pink-400"
-          />
-
-          <input
-            type="tel"
-            name="phone"
-            placeholder="Phone Number"
-            value={formData.phone}
-            onChange={handleChange}
-            required
-            className="w-full border bg-white border-pink-400 p-2 text-pink-500 rounded placeholder-pink-400"
-          />
-
-          <textarea
-            name="description"
-            placeholder="Additional Information"
-            value={formData.description}
-            onChange={handleChange}
-            rows="4"
-            className="w-full border bg-white border-pink-400 p-2 rounded text-pink-500 placeholder-pink-400"
-          />
-
-          <button
-            type="submit"
-            className="w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition"
+      {/* Right Side - Form with Background */}
+      <div
+        className="w-full md:w-1/2 relative z-10 flex items-center justify-center rounded-lg overflow-hidden"
+        style={{
+          backgroundImage: `url(${bg})`,
+          backgroundSize:"cover",
+          backgroundPosition: "center",
+        }}
+      >
+        {/* Semi-transparent overlay */}
+        <div className=" w-full h-full p-6">
+          <form
+            onSubmit={handleSubmit}
+            className="space-y-4 z-30"
           >
-            Submit
-          </button>
-        </form>
+            <h2 className="text-xl text-pink-800 font-bold mb-4 text-center">
+              Contact Us
+            </h2>
+
+            <input
+              type="text"
+              name="name"
+              placeholder="Full Name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+              className="w-full border bg-white border-pink-400 text-pink-500 p-2 rounded placeholder-pink-400"
+            />
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              className="w-full border bg-white border-pink-400 p-2 rounded text-pink-500 placeholder-pink-400"
+            />
+
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Phone Number"
+              value={formData.phone}
+              onChange={handleChange}
+              required
+              className="w-full border bg-white border-pink-400 p-2 text-pink-500 rounded placeholder-pink-400"
+            />
+
+            <textarea
+              name="description"
+              placeholder="Additional Information"
+              value={formData.description}
+              onChange={handleChange}
+              rows="4"
+              className="w-full border bg-white border-pink-400 p-2 rounded text-pink-500 placeholder-pink-400"
+            />
+
+            <button
+              type="submit"
+              className="w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );
