@@ -47,17 +47,19 @@ const Contact = () => {
       {/* Right Side - Form with Background */}
       <div
         className="w-full md:w-1/2 relative z-10 flex items-center justify-center rounded-lg overflow-hidden"
-        style={{
+ 
+      >
+        {/* Semi-transparent overlay */}
+        <div className=" w-full h-full p-6"
+               style={{
           backgroundImage: `url(${bg})`,
           backgroundSize:"cover",
           backgroundPosition: "center",
-        }}
-      >
-        {/* Semi-transparent overlay */}
-        <div className=" w-full h-full p-6">
+        }}  
+        >
           <form
             onSubmit={handleSubmit}
-            className="space-y-4 z-30"
+            className="space-y-4 "
           >
             <h2 className="text-xl text-pink-800 font-bold mb-4 text-center">
               Contact Us
@@ -70,7 +72,7 @@ const Contact = () => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full border bg-white border-pink-400 text-pink-500 p-2 rounded placeholder-pink-400"
+              className="w-[93%] ml-4  border bg-white border-pink-400 text-pink-500 p-1  rounded placeholder-pink-400"
             />
 
             <input
@@ -80,7 +82,7 @@ const Contact = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full border bg-white border-pink-400 p-2 rounded text-pink-500 placeholder-pink-400"
+              className="w-[93%] ml-4 border bg-white border-pink-400 p-2 rounded text-pink-500 placeholder-pink-400"
             />
 
             <input
@@ -90,7 +92,7 @@ const Contact = () => {
               value={formData.phone}
               onChange={handleChange}
               required
-              className="w-full border bg-white border-pink-400 p-2 text-pink-500 rounded placeholder-pink-400"
+              className="w-[93%] ml-4 border bg-white border-pink-400 p-2 text-pink-500 rounded placeholder-pink-400"
             />
 
             <textarea
@@ -99,12 +101,12 @@ const Contact = () => {
               value={formData.description}
               onChange={handleChange}
               rows="4"
-              className="w-full border bg-white border-pink-400 p-2 rounded text-pink-500 placeholder-pink-400"
+              className="w-[93%] ml-4 border bg-white border-pink-400 p-2 rounded text-pink-500 placeholder-pink-400"
             />
 
             <button
               type="submit"
-              className="w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition"
+              className="w-[93%] ml-4 bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition"
             >
               Submit
             </button>
