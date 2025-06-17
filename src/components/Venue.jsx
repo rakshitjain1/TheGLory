@@ -16,22 +16,33 @@ const Venue = () => {
         </div>
 
         {/* Swiper Section */}
-        <Swiper
-          slidesPerView={3}
-          spaceBetween={25}
-          navigation={true}
-          modules={[Navigation, Autoplay]}
-          autoplay={{ delay: 3000 }}
-          className="mySwiper"
-        >
-          {Array.from({ length: 8 }).map((_, index) => (
-            <SwiperSlide key={index}>
-              <div className="item rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
-                <img src={banner} alt={`banner-${index}`} className="w-full h-64 object-cover" />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+     <Swiper
+  spaceBetween={25}
+  navigation={true}
+  modules={[Navigation, Autoplay]}
+  autoplay={{ delay: 3000 }}
+  breakpoints={{
+    0: {
+      slidesPerView: 1,
+    },
+    640: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  }}
+  className="mySwiper"
+>
+  {Array.from({ length: 8 }).map((_, index) => (
+    <SwiperSlide key={index}>
+      <div className="item rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+        <img src={banner} alt={`banner-${index}`} className="w-full h-64 object-cover" />
+      </div>
+    </SwiperSlide>
+  ))}
+</Swiper>
+
       </div>
     </div>
   );
