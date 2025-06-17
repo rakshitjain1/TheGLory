@@ -19,6 +19,7 @@ const Venue = () => {
      <Swiper
   spaceBetween={25}
   navigation={true}
+  loop={true}
   modules={[Navigation, Autoplay]}
   autoplay={{ delay: 3000 }}
   breakpoints={{

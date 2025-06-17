@@ -2,39 +2,40 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Autoplay,Pagination, Navigation } from "swiper/modules";
+import "swiper/css/pagination";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 import banner1 from "../assets/1.jpg";
 import banner2 from "../assets/2.jpg";
 import banner3 from "../assets/3.jpg";
 
-
 const slides = [banner1, banner2, banner3];
 
 const HeroSection = () => {
   return (
-    <div className="Homeslider  ">
+    <div className="Homeslider">
       <div className="">
-         <Swiper
-          loop={true}
-          // slidesPerView={1}
-          spaceBetween={100}
+        {/* Swiper Section */}
+        <Swiper
+          spaceBetween={25}
+          slidesPerView={1}
           navigation={true}
-          modules={[Navigation,Autoplay]}
-
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
+          pagination={{ clickable: true }}
+          loop={true}
+          modules={[Navigation, Autoplay, Pagination]}
+          autoplay={{ 
+            delay: 3000,
+            disableOnInteraction: false 
           }}
-                    className="sliderHome"
+          className="mySwiper"
         >
-          {slides.map((img, index) => (
+          {slides.map((slide, index) => (
             <SwiperSlide key={index}>
-              <div className="item  overflow-hidden">
-                <img
-                  src={img}
-                  alt={`slide-${index}`}
-                  className="w-full h-[550px] object-fit"
+              <div className="item overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+                <img 
+                  src={slide} 
+                  alt={`banner-${index + 1}`} 
+                  className="w-full h-[550px] object-cover" 
                 />
               </div>
             </SwiperSlide>
