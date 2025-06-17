@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import img from "../assets/2.jpg";
 import bg from "../assets/bg.png";
 
 const Contact = () => {
@@ -57,31 +56,48 @@ const Contact = () => {
   return (
     <div className="container min-h-screen py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-pink-50 to-white">
       <div className="max-w-6xl mx-auto">
-      
-
         <div className="flex flex-col lg:flex-row gap-8 bg-white rounded-2xl shadow-xl overflow-hidden">
-          {/* Left Side Image */}
-          <div className="lg:w-1/2">
-            <img
-              src={img}
-              alt="Wedding Decoration"
-              className="w-full h-full object-cover"
-            />
+          {/* Left Side - Text Content */}
+          <div className="lg:w-1/2 p-12 flex flex-col justify-center items-center text-center bg-pink-50">
+            <h2 className="text-4xl font-bold text-pink-800 mb-6">
+              Get in Touch With Us
+            </h2>
+            <p className="text-xl text-pink-600 mb-8">
+              Planning your special day? Contact us today, and let's make your wedding dreams come true.
+            </p>
+            <div className="space-y-4 text-left w-full max-w-md">
+              <div className="flex items-start">
+                <svg className="h-6 w-6 text-pink-600 mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span className="text-pink-700">Personalized wedding planning</span>
+              </div>
+              <div className="flex items-start">
+                <svg className="h-6 w-6 text-pink-600 mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span className="text-pink-700">Expert decoration services</span>
+              </div>
+              <div className="flex items-start">
+                <svg className="h-6 w-6 text-pink-600 mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span className="text-pink-700">Stress-free coordination</span>
+              </div>
+            </div>
           </div>
 
           {/* Right Side - Form */}
           <div className="lg:w-1/2 p-8 md:p-12 relative"
-           
-           style={{
-          backgroundImage: `url(${bg}) `,
-          backgroundSize:"cover",
-          backgroundPosition: "center",
-        }} 
-     
-           >
+            style={{
+              backgroundImage: `url(${bg})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }} 
+          >
             {submitSuccess ? (
               <div className="text-center py-12">
-                <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full  mb-4">
+                <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full mb-4">
                   <svg
                     className="h-6 w-6 text-green-600"
                     fill="none"
@@ -111,9 +127,7 @@ const Contact = () => {
               </div>
             ) : (
               <>
-                <div className="absolute top-0 left-0 w-full h-full opacity-10 z-0">
-            
-                </div>
+                <div className="absolute top-0 left-0 w-full h-full opacity-10 z-0"></div>
                 <div className="relative z-10">
                   <h2 className="text-3xl font-bold text-pink-800 mb-8 text-center">
                     Contact Form
@@ -132,7 +146,7 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 rounded-lg border text-pink-700 border-pink-300 bg-white focus:ring-pink-200  focus:border-transparent placeholder-pink-400"
+                        className="w-full px-4 py-3 rounded-lg border text-pink-700 border-pink-300 bg-white focus:ring-pink-200 focus:border-transparent placeholder-pink-400"
                       />
                     </div>
 
@@ -148,7 +162,7 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 rounded-lg border text-pink-700 border-pink-300 bg-white focus:ring-pink-200  focus:border-transparent placeholder-pink-400"
+                        className="w-full px-4 py-3 rounded-lg border text-pink-700 border-pink-300 bg-white focus:ring-pink-200 focus:border-transparent placeholder-pink-400"
                       />
                     </div>
 
@@ -164,11 +178,9 @@ const Contact = () => {
                         value={formData.phone}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 rounded-lg border text-pink-700 border-pink-300 bg-white focus:ring-pink-200  focus:border-transparent placeholder-pink-400"
+                        className="w-full px-4 py-3 rounded-lg border text-pink-700 border-pink-300 bg-white focus:ring-pink-200 focus:border-transparent placeholder-pink-400"
                       />
                     </div>
-
-
 
                     <div>
                       <label htmlFor="description" className="block text-sm font-medium text-pink-700 mb-1">
@@ -181,7 +193,7 @@ const Contact = () => {
                         value={formData.description}
                         onChange={handleChange}
                         rows="4"
-                        className="w-full px-4 py-3 rounded-lg border text-pink-700 border-pink-300 bg-white focus:ring-pink-200  focus:border-transparent placeholder-pink-400"
+                        className="w-full px-4 py-3 rounded-lg border text-pink-700 border-pink-300 bg-white focus:ring-pink-200 focus:border-transparent placeholder-pink-400"
                       />
                     </div>
 
