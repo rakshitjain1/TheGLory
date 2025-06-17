@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import img from "../assets/2.jpg";
-import bg from "../assets/bg.jpg";
+import bg from "../assets/bg.png";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
