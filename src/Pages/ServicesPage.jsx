@@ -10,14 +10,14 @@ import img6 from '../assets/services/6.jpg'
 
 
 const services = [
-  { title: "Decorations", image: img1 },
-  { title: "Videography", image: img2 },
-  { title: "Choreography", image:  img3},
+  { title: "Decorations", image: img4},
+  { title: "Videography", image: img3 },
+  { title: "Choreography", image:  img1},
   { title: "Lodging", image: img4 },
-  { title: "Bridal Makeup", image: img5 },
+  { title: "Bridal Makeup", image: img2 },
   { title: "Mehendi Artist", image: img6 },
-  { title: "Invitation Cards", image: mayraImg },
-  { title: "Entertainment Setups", image: mayraImg },
+  { title: "Invitation Cards", image: img5 },
+  { title: "Entertainment Setups", image: img6 },
 ];
 
 const ServicesPage = () => {
