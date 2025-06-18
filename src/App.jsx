@@ -7,9 +7,11 @@ import Header from './components/Header'
 import Home from './Home'
 import Gallery from './Pages/Gallery'
 import Footer from './components/Footer'
+
 import GalleryDetail from './Pages/GalleryDetail'
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import ServicesPage from './Pages/ServicesPage'
 function App() {
  
       
@@ -38,6 +40,10 @@ const ScrollToTop = () => {
          <Route path="/" exact={true} element={<Home/>} />
          <Route path="/gallery" exact={true} element={<Gallery/>} />
          <Route path="/gallery/:category" element={<GalleryDetail />} />
+         <Route path="/services" element={<ServicesPage />} />
+
+
+
        
        </Routes>
        <Footer/>
