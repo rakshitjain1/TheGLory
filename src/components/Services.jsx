@@ -14,7 +14,7 @@ const ServiceBox = ({ to, label, image }) => (
     to={to}
     className="relative w-full h-[300px] rounded overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
   >
-    <div className="absolute top-2 left-2 z-10 bg-pink-300 bg-opacity-80 font-bold text-lg px-3 py-1 rounded"  style={{ color: "#800022" }}>
+    <div className="absolute top-2 left-2 z-10 bg-pink-200 bg-opacity-80 font-bold text-lg px-3 py-1 rounded"  style={{ color: "#800022" }}>
       {label}
     </div>
     <img src={image} alt={label} className="w-full h-full object-cover" />
@@ -24,9 +24,9 @@ const ServiceBox = ({ to, label, image }) => (
 // Main Services component
 const Services = () => {
   return (
-    <div className="container ">
+    <div className="container  ">
     <div
-      className="min-h-screen bg-pink-200 mt-5 py-10 px-4"
+      className="min-h-screen bg-pink-100 mt-5 py-10 px-4"
      
     >
       {/* Heading */}
@@ -36,7 +36,7 @@ const Services = () => {
       </div>
 
       {/* Grid layout for service boxes */}
-   <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+   <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
         <ServiceBox to="/reception" label="Reception" image={receptionImg} />
         <ServiceBox to="/ceremony" label="Ceremony" image={ceremonyImg} />
         <ServiceBox to="/haldi" label="Haldi" image={haldiImg} />
