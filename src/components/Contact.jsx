@@ -130,7 +130,7 @@ const Contact = () => {
                 <div className="absolute top-0 left-0 w-full h-full opacity-10 z-0"></div>
                 <div className="relative z-10">
                   <h2 className="text-3xl font-bold text-pink-800 mb-8 text-center">
-                    Contact Form
+                    Contact Us
                   </h2>
 
                   <form onSubmit={handleSubmit} className="space-y-6">
