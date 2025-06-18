@@ -1,54 +1,84 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Autoplay, Navigation } from "swiper/modules";
 
 import receptionImg from "../assets/reception.jpg";
 import ceremonyImg from "../assets/ceremony.png";
 import haldiImg from "../assets/haldi.jpg";
 import sangeetImg from "../assets/sangeet.jpg";
-import mayraImg from "../assets/mayra.jpg"; // placeholder
-import { colors } from "@mui/material";
+import mayraImg from "../assets/mayra.jpg";
 
-// Reusable Service Box component
-const ServiceBox = ({ to, label, image }) => (
-  <Link
-    to={to}
-    className="relative w-full h-[300px] rounded overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
-  >
-    <div className="absolute top-2 left-2 z-10 bg-pink-200 bg-opacity-80 font-bold text-lg px-3 py-1 rounded"  style={{ color: "#800022" }}>
-      {label}
+// Reusable Service Box component (no Link)
+const ServiceBox = ({ label, image }) => (
+  <div className="relative w-full h-[300px] rounded-xl overflow-hidden shadow-lg group">
+    {/* Image */}
+    <img
+      src={image}
+      alt={label}
+      className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+    />
+
+    {/* Overlay with blur and label */}
+    <div className="absolute inset-0  bg-opacity-40 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+      <span className="text-pink-800 text-xl font-bold">{label}</span>
     </div>
-    <img src={image} alt={label} className="w-full h-full object-cover" />
-  </Link>
+  </div>
 );
 
-// Main Services component
+
+// Data for services
+const services = [
+  { label: "Reception", image: receptionImg },
+  { label: "Ceremony", image: ceremonyImg },
+  { label: "Haldi", image: haldiImg },
+  { label: "Sangeet", image: sangeetImg },
+  { label: "Mayra", image: mayraImg },
+  { label: "Sufi Night", image: sangeetImg },
+  { label: "Wedding", image: mayraImg },
+  { label: "Mehndi", image: haldiImg },
+  { label: "After Party", image: mayraImg },
+  { label: "Sajan Goth", image: receptionImg },
+];
+
 const Services = () => {
   return (
-    <div className="container  ">
-    <div
-      className="min-h-screen bg-pink-100 mt-5 py-10 px-4"
-     
-    >
-      {/* Heading */}
-      <div className="text-center mt-10 text-pink-700">
-        <h1 className="text-3xl font-bold mt-6">Wedding Curated by</h1>
-        <h2 className="text-xl italic mt-2 mb-10">The Glory Event</h2>
-      </div>
+    <div className="container mx-auto">
+      <div className=" bg-pink-50 mt-5 py-8 px-8">
+        {/* Heading */}
+        <div className="text-center mt-10  text-pink-700">
+          <h1 className="text-3xl font-bold mt-6">Wedding Curated by</h1>
+          <h2 className="text-xl italic mt-2 mb-10">The Glory Event</h2>
+        </div>
 
-      {/* Grid layout for service boxes */}
-   <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-        <ServiceBox to="/reception" label="Reception" image={receptionImg} />
-        <ServiceBox to="/ceremony" label="Ceremony" image={ceremonyImg} />
-        <ServiceBox to="/haldi" label="Haldi" image={haldiImg} />
-        <ServiceBox to="/sangeet" label="Sangeet" image={sangeetImg} />
-        <ServiceBox to="/mayra" label="Mayra" image={mayraImg} />
-        <ServiceBox to="/mayra" label="Sufi Night" image={sangeetImg} />
-        <ServiceBox to="/mayra" label="Wedding" image={mayraImg} />
-        <ServiceBox to="/mayra" label="Mehndi" image={haldiImg} />
-        <ServiceBox to="/mayra" label="After Party" image={mayraImg} />
-        <ServiceBox to="/mayra" label="Sajan Goth" image={receptionImg} />
+        {/* Swiper Carousel */}
+        <Swiper
+          spaceBetween={25}
+          navigation={true}
+          loop={true}
+          modules={[Navigation, Autoplay]}
+          autoplay={{ delay: 3000 }}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
+            640: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+          }}
+          className="mySwiper"
+        >
+          {services.map((service, index) => (
+            <SwiperSlide key={index}>
+              <ServiceBox {...service} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
-    </div>
     </div>
   );
 };

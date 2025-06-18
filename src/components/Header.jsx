@@ -35,7 +35,7 @@ const Header = () => {
               <li key={idx}>
                 <Link
                   to={link.path}
-                  className="text-lg font-medium text-black hover:text-pink-700 transition duration-200"
+                  className="text-lg font-medium text-pink-800 hover:text-pink-500 transition duration-200"
                 >
                   {link.name}
                 </Link>
