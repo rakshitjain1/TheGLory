@@ -117,7 +117,7 @@ const GalleryDetail = () => {
         src={src}
         alt={`image-${idx}`}
         onClick={() => setSelectedImage(src)}
-        className="w-full h-60 object-cover rounded shadow cursor-pointer transition-transform hover:scale-105"
+        className="w-full h-85 object-cover rounded shadow cursor-pointer transition-transform hover:scale-105"
       />
     ))}
   </div>
