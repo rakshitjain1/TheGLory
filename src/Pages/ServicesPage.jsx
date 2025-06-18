@@ -1,14 +1,21 @@
 import React, { useEffect, useRef } from "react";
 import mayraImg from "../assets/mayra.jpg";
 import divider from "../assets/s1.png";
+import img1 from '../assets/services/1.jpg'
+import img2 from '../assets/services/2.jpg'
+import img3 from '../assets/services/3.jpg'
+import img4 from '../assets/services/4.jpg'
+import img5 from '../assets/services/5.jpg'
+import img6 from '../assets/services/6.jpg'
+
 
 const services = [
-  { title: "Decorations", image: mayraImg },
-  { title: "Videography", image: mayraImg },
-  { title: "Choreography", image: mayraImg },
-  { title: "Lodging", image: mayraImg },
-  { title: "Bridal Makeup", image: mayraImg },
-  { title: "Mehendi Artist", image: mayraImg },
+  { title: "Decorations", image: img1 },
+  { title: "Videography", image: img2 },
+  { title: "Choreography", image:  img3},
+  { title: "Lodging", image: img4 },
+  { title: "Bridal Makeup", image: img5 },
+  { title: "Mehendi Artist", image: img6 },
   { title: "Invitation Cards", image: mayraImg },
   { title: "Entertainment Setups", image: mayraImg },
 ];
@@ -52,7 +59,7 @@ const ServicesPage = () => {
         <img src={divider} alt="Divider" className="h-6" />
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
         {services.map((service, index) => (
           <div
             key={index}

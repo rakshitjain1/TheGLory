@@ -37,8 +37,8 @@ const ScrollToTop = () => {
        <Header/>
       <ScrollToTop />
        <Routes>
-         <Route path="/" exact={true} element={<Home/>} />
-         <Route path="/gallery" exact={true} element={<Gallery/>} />
+         <Route path="/"  element={<Home/>} />
+         <Route path="/gallery" element={<Gallery/>} />
          <Route path="/gallery/:category" element={<GalleryDetail />} />
          <Route path="/services" element={<ServicesPage />} />
 
