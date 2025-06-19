@@ -16,12 +16,17 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-pink-100 border-b border-pink-200 shadow-sm">
-      <div className="container mx-auto flex items-center justify-between py-4 px-6">
-        {/* Logo */}
-        <Link to="/" className="flex items-center space-x-2">
-          <img className="w-12 h-12 object-contain" src={logo} alt="logo" />
-        </Link>
+    <header className="sticky top-0 z-50 bg-pink-100 border-b border-pink-200 shadow-sm h-20">
+      <div className="container mx-auto flex items-center justify-between h-full px-6">
+        
+         <div className="w-[30%] h-[55px] flex items-center space-x-2">
+  <Link to="/" className="flex items-center space-x-2">
+    <img className="w-50 h-50 object-contain" src={logo} alt="logo" />
+    {/* <span className="text-2xl font-extrabold text-pink-700">
+      The Glory Event
+    </span> */}
+  </Link>
+</div>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex">
@@ -53,8 +58,7 @@ const Header = () => {
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="flex justify-between items-center p-4 border-b border-pink-200">
-      
+        <div className="flex justify-end items-center p-4 border-b border-pink-200">
           <button onClick={() => setIsMenuOpen(false)} className="text-2xl text-pink-700">
             <FiX />
           </button>
@@ -75,10 +79,10 @@ const Header = () => {
         </ul>
       </div>
 
-   
+      {/* Overlay Background */}
       {isMenuOpen && (
         <div
-          className="fixed inset-0  bg-opacity-30 z-40"
+          className="fixed inset-0 bg-opacity-30 z-40"
           onClick={() => setIsMenuOpen(false)}
         />
       )}
