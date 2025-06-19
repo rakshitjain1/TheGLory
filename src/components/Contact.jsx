@@ -54,7 +54,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="container min-h-screen py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-pink-50 to-white">
+    <div className="container py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-pink-50 to-white">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-8 bg-white rounded-2xl shadow-xl overflow-hidden">
           {/* Left Side - Text Content */}
