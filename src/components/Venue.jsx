@@ -32,14 +32,14 @@ const venues = [
     mapLink: "https://maps.app.goo.gl/nHMLq1tDZXN2em6a9?g_st=aw",
   },
   {
-    name: "Pushkar Fort - Luxury Heritage Resort",
+    name: "Pushkar Fort",
     description:
       "Perfectly crafted outdoor venue for grand wedding ceremonies and parties.",
     image: venue4,
     mapLink: "https://maps.app.goo.gl/9sGmffXYN2z4aagj9?g_st=aw",
   },
   {
-    name: "The Country Side Resort- Refined By Nature",
+    name: "The Country Side Resort",
     description:
       "Celebrate your love with a beautiful view and elegant open space.",
     image: venue5,
@@ -60,7 +60,7 @@ const Venue = () => {
       <div className="venue-section py-10 bg-pink-100 container mx-auto px-4">
         {/* Heading Section */}
         <div className="text-center mb-8">
-          <h2 className="text-4xl font-bold text-pink-800 mb-2">Our Venues</h2>
+          <h2 className="text-4xl font-bold text-pink-800 mb-2"> Venues</h2>
           <p className="text-pink-700 text-lg">
             Explore the highlights of our venue collection
           </p>
