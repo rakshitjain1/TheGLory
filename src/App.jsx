@@ -13,6 +13,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import ServicesPage from './Pages/ServicesPage'
 import ContactPage from './Pages/ContactPage'
+import VenuePage from './Pages/VenuePage'
 function App() {
  
       
@@ -43,6 +44,7 @@ const ScrollToTop = () => {
          <Route path="/gallery/:category" element={<GalleryDetail />} />
          <Route path="/services" element={<ServicesPage />} />
          <Route path="/contact-us" element={<ContactPage />} />
+         <Route path="/venue" element={<VenuePage />} />
 
 
 
