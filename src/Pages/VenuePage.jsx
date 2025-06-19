@@ -5,11 +5,11 @@ import jollywood from "../assets/venue/venue1.jpg";
 import ananta from "../assets/venue/venue2.jpg";
 import bageecha from "../assets/venue/venue3.jpg";
 import pushkara from "../assets/venue/venue4.jpg";
-import bhanwar from "../assets/venue/venue5.jpg";
+import bhanwar from "../assets/venue/venue5.JPG";
 import fort from "../assets/venue/venue6.jpg";
 import regenta from "../assets/venue/venue2.jpg";
 import westin from "../assets/venue/venue1.jpg";
-import countryside from "../assets/venue/venue5.jpg";
+import countryside from "../assets/venue/venue5.JPG";
 import kesariya from "../assets/venue/venue6.jpg";
 
 // Decorative image under heading
@@ -101,16 +101,16 @@ const venues = [
 const Venue = () => {
   return (
     <div className="px-6 py-10 max-w-6xl mx-auto">
-      {/* Heading */}
+    
       <h1 className="text-4xl font-bold text-pink-800 text-center"> Top Venue</h1>
    
-      {/* Decorative Image */}
+
         <div className="flex justify-center mb-10 mt-3">
                 <img src={divider} alt="Divider" className="h-6" />
               </div>
       
 
-      {/* Venue Cards */}
+
       <div className="space-y-12">
         {venues.map((venue, index) => (
           <a
@@ -122,7 +122,7 @@ const Venue = () => {
           >
             <div className="flex flex-col md:flex-row gap-6 items-start bg-pink-200 p-6 rounded-lg shadow-md border border-pink-100 hover:shadow-lg hover:border-pink-300 transform hover:scale-105 transition duration-300"
 >
-              {/* Left: Image */}
+        
               <div className="w-full md:w-1/2">
                 <img
                   src={venue.image}
@@ -131,7 +131,7 @@ const Venue = () => {
                 />
               </div>
 
-              {/* Right: Details */}
+        
               <div className="w-full md:w-1/2">
                 <h2 className="text-2xl font-semibold text-pink-700">
                   {venue.name}
