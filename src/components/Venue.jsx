@@ -6,6 +6,7 @@ import venue2 from "../assets/venue2.jpg";
 import venue3 from "../assets/venue3.jpg";
 import venue4 from "../assets/venue4.jpg";
 import venue5 from "../assets/venue5.JPG";
+
 import venue6 from "../assets/venue6.jpg";
 
 // Sample venue data
