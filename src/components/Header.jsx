@@ -22,9 +22,6 @@ const Header = () => {
          <div className="w-[30%] h-[55px] flex items-center space-x-2">
   <Link to="/" className="flex items-center space-x-2">
     <img className="w-50 h-50 object-contain" src={logo} alt="logo" />
-    {/* <span className="text-2xl font-extrabold text-pink-700">
-      The Glory Event
-    </span> */}
   </Link>
 </div>
 
